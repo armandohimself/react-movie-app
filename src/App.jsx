@@ -1,23 +1,36 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
-// WIP
-// const RandomStyle = () => {
-//   useEffect(() => {
-//     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-//     document.documentElement.style.setProperty(
-//       "--random-color",
-//       `#${randomColor}`
-//     );
-//   }, []);
-// };
-
 const Card = ({ title }) => {
+  const [hasLiked, setHasLiked] = useState(false);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log(`${title} has been liked: ${hasLiked}`);
+  }, [hasLiked, title]);
+
   return (
     <>
-      <div className="card-title">
-        <h2>{title}</h2>
+      <div
+        className="card"
+        onClick={() => {
+          setCount((prevState) => {
+            return prevState + 1;
+          });
+        }}
+      >
+        <h2>
+          {title} <br /> {count}
+        </h2>
+
+        <button
+          onClick={() => {
+            setHasLiked(!hasLiked);
+          }}
+        >
+          {hasLiked ? "Liked" : "Like"}
+        </button>
       </div>
-      <div className="card-body">Lorem ipsum...</div>
     </>
   );
 };
@@ -27,10 +40,8 @@ const App = () => {
     <div>
       <h2>Functional Arrow Component</h2>
       <div className="card-container">
-        <div className="card-content">
-          <Card title="Batman" />
-          <Card title="Superman VS Batman" />
-        </div>
+        <Card title="Batman" />
+        <Card title="Superman VS Batman" />
       </div>
     </div>
   );
