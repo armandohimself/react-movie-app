@@ -12,13 +12,15 @@ const App = () => {
   const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
   const API_BASE_URL = import.meta.env.VITE_TMDB_BASE_URL;
 
-  const fetchMovies = async () => {
+  const fetchMovies = async (query = "") => {
     setisLoading(true);
     setErrorMessage("");
 
     try {
       // Shape the fetch
-      const endpoint = `${API_BASE_URL}/discover/movie?sort_by=popularity.desc`;
+      const endpoint = query
+        ? `${API_BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
+        : `${API_BASE_URL}/discover/movie?sort_by=popularity.desc`;
 
       const options = {
         method: "GET",
@@ -58,8 +60,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchMovies();
-  }, []);
+    fetchMovies(searchTerm);
+  }, [searchTerm]);
 
   return (
     <main>
