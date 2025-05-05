@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDebounce } from "react-use";
+import { updateSearchCount } from "./appwrite";
 import MovieCard from "./components/MovieCard";
 import Search from "./components/Search";
 import Spinner from "./components/Spinner";
@@ -52,7 +53,10 @@ const App = () => {
         return;
       }
 
+      // Set movie list to render on screen
       setMovieList(data.results || []);
+
+      updateSearchCount();
 
       setisLoading(false);
     } catch (error) {
