@@ -74,6 +74,8 @@ const App = () => {
     try {
       const movies = await getTrendingMovies();
       setTrendingMovies(movies);
+
+      console.log(trendingMovies);
     } catch (error) {
       console.log(`Error fetching trending movies ${error}`);
     }
@@ -110,6 +112,7 @@ const App = () => {
               {trendingMovies.map((movie, index) => (
                 <li key={movie.$id || index}>
                   <p>{index + 1}</p>
+                  <img src={movie.poster_url} alt={movie.title} />
                 </li>
               ))}
             </ul>
