@@ -2,7 +2,8 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "allowJs": true
+    "allowJs": true,
+    "outDir": "dist" // Specify the output directory
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
