@@ -22,9 +22,13 @@ npm install
 npm run dev
 ```
 
-## Good to Know
+## Dev Notes
 
-tsconfig.json → Base config
-tsconfig.app.json → For your actual app code (React components, pages)
-tsconfig.test.json → For tests (e.g., uses `vitest`)
-tsconfig.node.json → For CLI tools or scripts
+- tsconfig.json → Base config
+- tsconfig.app.json → For your actual app code (React components, pages)
+- tsconfig.test.json → For tests (e.g., uses `vitest`)
+- tsconfig.node.json → For CLI tools or scripts
+
+## Future Dependency ToDo List
+
+- [(node:6498) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.](https://dev.to/asim_khan_cbe65e41bcbbc65/solving-the-punycode-module-is-deprecated-issue-in-nodejs-2e59)
