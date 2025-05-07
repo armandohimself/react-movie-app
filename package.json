@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test-file": "vitest [relative path to file goes here]",
     "test-vitest": "vitest",
     "vitest-coverage": "vitest run --coverage",
     "test-jest": "jest",
