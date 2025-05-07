@@ -1,9 +1,16 @@
 {
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "allowJs": true,
-    "outDir": "dist" // Specify the output directory
+    "esModuleInterop": true,
+    "outDir": "dist", // Specify the output directory
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
