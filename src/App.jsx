@@ -110,7 +110,15 @@ const App = () => {
               {trendingMovies.map((movie, index) => (
                 <li key={movie.$id || index}>
                   <p>{index + 1}</p>
-                  <img src={movie.poster_url} alt={movie.title} />
+                  <img
+                    src={
+                      movie.poster_url && !movie.poster_url.endsWith("null")
+                        ? movie.poster_url
+                        : "/no-movie.png"
+                    }
+                    alt={movie.title || "No movie poster available"}
+                  />
+                  {console.log(movie.poster_url)}
                 </li>
               ))}
             </ul>
