@@ -21,3 +21,10 @@ This is a modern React app bootstrapped with [Vite](https://vitejs.dev/) for fas
 npm install
 npm run dev
 ```
+
+## Good to Know
+
+tsconfig.json → Base config
+tsconfig.app.json → For your actual app code (React components, pages)
+tsconfig.test.json → For tests (e.g., uses `vitest`)
+tsconfig.node.json → For CLI tools or scripts

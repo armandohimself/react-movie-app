@@ -1,8 +1,6 @@
-import React from "react";
-
 const Spinner = () => {
   return (
-    <div role="status">
+    <div role="status" aria-live="polite">
       <svg
         aria-hidden="true"
         className="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
@@ -25,3 +23,6 @@ const Spinner = () => {
 };
 
 export default Spinner;
+
+// https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role
+// https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live
