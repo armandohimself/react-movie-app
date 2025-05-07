@@ -1,10 +1,15 @@
 import React from "react";
 
-const Search = ({ searchTerm, setSearchTerm }) => {
+interface SearchProps {
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
+}
+
+const Search: React.FC<SearchProps> = ({ searchTerm, setSearchTerm }) => {
   return (
     <div className="search">
       <div>
-        <img src="search.svg" alt="seach" />
+        <img src="search.svg" alt="search" />
 
         <input
           type="text"

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "test-file": "vitest [relative path to file goes here]",
+    "test-file": "vitest src/components/Search.test.tsx",
     "test-vitest": "vitest",
     "vitest-coverage": "vitest run --coverage",
     "test-jest": "jest",
