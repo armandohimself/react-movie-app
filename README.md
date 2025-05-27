@@ -93,3 +93,4 @@ Here is a table displaying some of the differences between the two test runners:
 
 - [(node:6498) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.](https://dev.to/asim_khan_cbe65e41bcbbc65/solving-the-punycode-module-is-deprecated-issue-in-nodejs-2e59)
 - add script to remove all comments before pushing to production, I believe that Vite has such a process to integrate something like this in my codebase.
+- add more tests
